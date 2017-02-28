@@ -104,7 +104,7 @@
 <div id="newGoalModal" class="modal" style="width: 85%; height: 70%;">
   <!-- Submit Entire Goal -->
   <div class="right">
-    <a ng-click="vm.addGoal()" class="btn-floating btn-large waves-effect waves-light red odal-action modal-close" style="margin-top: 5px; margin-right: 5px;"><i class="material-icons">add</i></a>
+    <a ng-click="vm.addGoal()" class="btn-floating btn-large waves-effect waves-light odal-action modal-close" style="margin-top: 5px; margin-right: 5px;"><i class="material-icons">add</i></a>
   </div>
   <!-- Modal Form -->
   <div class="modal-content">
@@ -147,6 +147,8 @@
         <input ng-model="vm.date" type="text" placeholder="Add an end date for your goal" required/>
       </datepicker>
       </div>
+      <!-- Choose a Backer -->
+
       <!-- Add backers -->
         <div>
           <a ng-show="!vm.atLeastOneBacker" class="btn" ng-click="vm.addBacker()">Add a backer</a>
