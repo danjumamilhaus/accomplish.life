@@ -18,7 +18,7 @@
 
       // Get user details from auth
       vm.displayLoginButton = () =>
-      localStorage.getItem('id_token') ? false : true;
+        localStorage.getItem('id_token') ? false : true;
 
       if(localStorage.getItem('id_token')) {
         lock.getProfile(localStorage.getItem('id_token'), function (error, profile) {

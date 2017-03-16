@@ -22,7 +22,7 @@
 
       // Get user details from auth
       vm.displayLoginButton = () =>
-      localStorage.getItem('id_token') ? false : true;
+        localStorage.getItem('id_token') ? false : true;
 
       lock.getProfile(localStorage.getItem('id_token'), function (error, profile) {
         vm.payload = profile;
@@ -31,8 +31,6 @@
             vm.user = user.data[0];
             vm.renderGoals();
           });
-
-        // Get user goals and render on page
       });
 
       vm.renderGoals = () => {
@@ -276,7 +274,6 @@
       };
 
       vm.deleteExistingBacker = function(backer) {
-        //console.log('bacer in deleteExistingBacker ', backer);
         var spliced = vm.existingBackers.indexOf(backer);
         vm.existingBackers.splice(spliced, 1);
         BackerFactory.deleteBacker(backer.id)
